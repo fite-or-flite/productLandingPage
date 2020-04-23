@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<title>Corellian Shipyards</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+    <img id="header-img" class="logo-image" src="https://vignette.wikia.nocookie.net/starwars/images/6/62/Corellian_Engineering_Corporation.svg/revision/latest/scale-to-width-down/500?cb=20080312040228" alt="Corellian Engineering Corportaion">
+    <hr>
+    <nav id="nav-bar">
+    <a class="nav-link" href="#addons">Freighter Add-ons</a>
+    <a class="nav-link" href="#video">Product in action</a>
+    <a class="nav-link" href="#footer">About Us</a>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Check Out Our Other Ships</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#">Gozanti-class cruiser</a>
+        <a href="#">Gozanti C-ROC</a>
+        <a href="#">CR90 corvette</a>
+        <a href="#">interstellar trash hauler</a>
+        <a href="#">Consular-class space cruiser</a>
+        <a href="#">G9 Rigger-class light freighter</a>
+      </div>
+    </div>
+    </nav>
+</header>
+<h1>Freighter Sales</h1><hr>
+<div class="container">
+    <div class="product-box">
+    <img class="larger-image" src="https://vignette.wikia.nocookie.net/starwars/images/6/68/HoundsToothLanded-SWE.png/revision/latest/scale-to-width-down/350?cb=20160911043908">
+    <p class="product-title">YV-666 Light Freighter</p>
+    <ul>
+        <li>132,000 credits
+        <li>Class 3 hyperdrive (standard)
+        <li>6 passengers
+    </ul>
+    <button type="purchase" id="purchase" class="purchase-button">Purchase</button>
+    </div>
+    <div class="product-box">
+    <img class="larger-image" src="https://vignette.wikia.nocookie.net/starwars/images/9/90/Millennium_Falcon_DICE.png/revision/latest/scale-to-width-down/500?cb=20161022010825">
+    <p class="product-title">YT-1300 Light Freighter</p>
+    <ul>
+        <li>100,000 credits
+        <li>Class 2 hyperdrive (standard)
+        <li>9-15 passengers
+        <li>25 metric ton cargo capacity
+    </ul>
+    <button type="purchase" id="purchase" class="purchase-button">Purchase</button>
+    </div>
+    <div class="product-box">
+    <img class="larger-image" src="https://vignette.wikia.nocookie.net/starwars/images/a/ab/Ghost.png/revision/latest/scale-to-width-down/500?cb=20140215201047">
+    <p class="product-title">VCX-100 Light Freighter</p>
+    <ul>
+        <li>155,000 credits
+        <li>Class 2 hyperdrive (standard)
+        <li>6 passengers
+        <li>VCX auxilliary starfighter dock
+    </ul>
+    <button type="purchase" id="purchase" class="purchase-button">Purchase</button>
+    </div>
+    <div class="product-box">
+    <img class="larger-image" src="https://vignette.wikia.nocookie.net/starwars/images/2/2c/Vcx700.jpg/revision/latest/scale-to-width-down/500?cb=20080510211041">
+    <p class="product-title">VCX-700 Heavy Courier</p>
+    <ul>
+        <li>price?
+        <li>class 1 hyperdrive (standard)
+        <li>6 passengers
+        <li>5 metric ton cargo capacity
+        <li>heavily armed
+    </ul>
+    <button type="purchase" id="purchase" class="purchase-button">Purchase</button>
+    </div>
+    <div class="product-box">
+    <img class="larger-image" src="https://vignette.wikia.nocookie.net/starwars/images/9/95/Grig.png/revision/latest/scale-to-width-down/499?cb=20160102183514">
+    <p class="product-title">Baleen-class Heavy Freighter</p>
+    <ul>
+        <li>135,000 credits
+        <li>2 crew member minimum
+        <li>75,000 metric ton cargo capacity
+    </ul>
+    <button type="purchase" id="purchase" class="purchase-button">Purchase</button>
+    </div>
+    <div class="product-box">
+    <p id="addons" class="product-title">Freighter Add-Ons</p>
+    <ul>
+        <li>Masking Transponders
+        <li>Weapons Systems
+        <li>Escape Pods
+    </ul>
+    <button type="purchase" id="purchase" class="purchase-button">Purchase</button>
+    </div>
+</div>
+<br>
+<div id="video">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/Iv1BAZj60xw" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+    ></iframe>
+</div>
+<br>
+</body>
+<footer id="footer">
+<hr>
+<img class="logo-image" src="https://www.vippng.com/png/detail/111-1119092_empire-logo-star-wars-star-wars-symbol-empire.png" alt="The empire did nothing wrong">
+The Empire has long been a loyal customer of Corellian Engineering Corporation.<br><br>
+For more information on ship customization, please enter your galactic email address: 
+<div class="form-group">
+    <form id="form" action="https://www.freecodecamp.com/email-submit"> 
+    <input
+        type="text"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your email address"
+        />
+    </form>
+</div> 
+<button type="submit" id="submit" class="submit-button">Submit</button>
+</footer>
+
+<script>
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
