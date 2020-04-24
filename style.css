@@ -71,6 +71,20 @@ iframe {
     align-items: center;
 }
 
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 650px) {
+    .logo-image {
+        margin-top: 15px;
+        width: 100%;
+        position: relative;
+    }
+}
+
 /*stupid form stuff*/
 .form-group {
     margin: 0 auto 1.25rem auto;
@@ -101,7 +115,7 @@ iframe {
 }
 
 .purchase-button {
-    margin: auto;
+    margin: auto; 
     display: flex;
     align-items: flex-end;
 }
